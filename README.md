@@ -87,7 +87,15 @@ Enter dashboard ID 16652 and click on "Load".
 
 8.Explore Trivy Operator metrics through Prometheus to gain insights into image vulnerabilities and enhance Kubernetes cluster security.:
 
-prom query:sum(trivy_image_vulnerabilities)
+Total vulnerabilities found in your cluster:
+
+sum(trivy_image_vulnerabilities)
+Total misconfiguration identified in your cluster:
+
+sum(trivy_resource_configaudits)
+Exposed Secrets discovered by the Trivy Operator in your cluster:
+
+sum(trivy_image_exposedsecrets)
 ![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/3839d47a-ff87-4550-b661-c289a26ddc44)
 
 
