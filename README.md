@@ -9,10 +9,20 @@ Step 2: Add Prometheus Helm Chart Repository
 
 
 Step 2: Add Prometheus Helm Chart Repository
+
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 ```
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/dc1f1a9b-e2b1-4c3a-b3f1-656936c1145d)
+
+Untar the Helm chart for prometheus-community/kube-prometheus-stack:
+
+```
+helm pull --untar prometheus-community/kube-prometheus-stack
+```
+
 
 Step 3: Customize and Install Kube Prometheus Stack
 Edit values.yaml to customize Kube Prometheus Stack:
@@ -27,13 +37,28 @@ prometheus:
 Install Prometheus Helm Chart:
 
 ```
-helm upgrade --install kube-prom prometheus-community/kube-prometheus-stack -f values.yaml --install --debug 
+helm upgrade --install kube-prom prometheus-community/kube-prometheus-stack -n monitoring -f values.yaml --install --debug 
 ```
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/f4eb40f5-88bb-44f9-a2cb-d52b060822f3)
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/c65769e6-4d2d-4603-98c1-457ad2d8abee)
+
+
+
 Step 4: Add Aqua Security Helm Chart Repository
 
 ```
 helm repo add aqua https://aquasecurity.github.io/helm-charts/
 helm repo update
+```
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/ed6853b2-6709-4d2f-a844-47f608c247c6)
+
+untar the Helm chart for trivy-operator from the aqua/trivy-operator
+
+```
+helm pull --untar aqua/trivy-operator
 ```
 
 Step 5: Customize and Install Trivy Operator
@@ -51,6 +76,9 @@ Install Trivy Operator:
 ```
 helm install trivy-operator aqua/trivy-operator -n monitoring -f values.yaml
 ```
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/28334278-d6e7-4211-a638-fc2147657b15)
+
 Step 6: Access Grafana Dashboard
 
 Port Forward Grafana Service
@@ -113,3 +141,15 @@ kubectl get rbacassessmentreports --all-namespaces -o wide
 kubectl get exposedsecretreport --all-namespaces -o wide
 kubectl get clustercompliancereport --all-namespaces -o wide
 ```
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/55490760-843d-4484-bb7b-53b9c725a9d5)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/6e0a2efa-ed0f-4101-bd92-9a0a4a492e2e)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/54bfe814-239e-4a06-a029-e26aecb1f481)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/f8287508-64dd-4905-8a80-13f28a8f1192)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/191ae33f-4c12-444b-b9de-7dcc33ed4c44)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/8cefac58-4d9a-4f9e-9f0e-7a5569da4fff)
+
+
+
+
+
