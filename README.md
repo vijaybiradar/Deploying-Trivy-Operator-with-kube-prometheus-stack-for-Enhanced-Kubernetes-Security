@@ -103,13 +103,22 @@ Password: prom-operator
 7. Import Trivy Dashboard into Grafana
 Navigate to "Dashboards" in Grafana.
 Click on "New" and select "Import".
-Enter dashboard ID 16742 and click on "Load".
+Enter dashboard ID 17813 and click on "Load".
 
-![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/68f13f6d-2ff2-4703-a019-f2e4dee9e937)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/e55a2a88-54b1-4f74-be75-1ca6ecafc92e)
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/33eed199-0a20-4cc4-81fb-5ab6b4ccfee4)
+
+
 Navigate to "Dashboards" in Grafana.
 Click on "New" and select "Import".
 Enter dashboard ID 16652 and click on "Load".
 ![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/fbed4ebe-9da8-4e4b-ba0d-6f3cc4c4ba27)
+
+Navigate to "Dashboards" in Grafana.
+Click on "New" and select "Import".
+Enter dashboard ID 16742 and click on "Load".
+
+![image](https://github.com/vijaybiradar/Trivy-Operator-in-Kubernetes-Cluster./assets/38376802/68f13f6d-2ff2-4703-a019-f2e4dee9e937)
 
 
 
