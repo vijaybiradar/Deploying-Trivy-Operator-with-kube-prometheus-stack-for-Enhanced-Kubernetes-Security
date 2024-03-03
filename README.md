@@ -5,10 +5,8 @@ Step 1: Create a Namespace for Monitoring
 kubectl create ns monitoring
 ```
 
-Step 2: Add Prometheus Helm Chart Repository
+Step 2: Add kube-prometheus-stack Helm Chart Repository
 
-
-Step 2: Add Prometheus Helm Chart Repository
 
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
