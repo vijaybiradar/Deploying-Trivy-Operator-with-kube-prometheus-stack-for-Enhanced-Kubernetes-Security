@@ -1,4 +1,4 @@
-# Deploying Trivy Operator with Kube Prometheus Stack for Enhanced Kubernetes Security.
+# Deploying Trivy Operator with kube-prometheus-stack for Enhanced Kubernetes Security.
 
 Step 1: Create a Namespace for Monitoring
 ```
